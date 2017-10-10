@@ -1,0 +1,7 @@
+dist/
+testdist/
+node_modules/
+coverage/
+scripts/**/*.js
+scripts/**/*.js.map
+*.vsix

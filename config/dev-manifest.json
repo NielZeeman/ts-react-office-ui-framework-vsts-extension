@@ -1,0 +1,7 @@
+{
+  "public": false,
+  "baseUri": "http://localhost:3000",
+  "name": "Dev: Office UI Fabric Sample",
+  "version": "0.0.10",
+  "publisher": "yourpublisher"
+}

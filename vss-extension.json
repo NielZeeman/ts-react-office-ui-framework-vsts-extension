@@ -1,0 +1,79 @@
+{
+  "manifestVersion": 1,
+  "id": "vsts-office-ui-fabric-sample",
+  "version": "0.0.3",
+  "name": "Office UI Fabric Sample",
+  "scopes": [
+    "vso.profile",
+    "vso.work"
+  ],
+  "description": "Sample Office UI Fabric based VSTS extension using TypeScript, React and WebPack",
+  "publisher": "",
+  "galleryFlags": [
+    "Preview"
+  ],
+  "icons": {
+    "default": "static/images/logo.png"
+  },
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "demands": [
+    "api-version/3.0"
+  ],
+  "tags": [
+    "User Stories",
+    "Plan"
+  ],
+  "screenshots": [
+    {
+      "path": "static/images/logo.png"
+    }
+  ],
+  "content": {
+    "license": {
+      "path": "assets/license"
+    },
+    "details": {
+      "path": "assets/readme.md"
+    }
+  },
+  "links": {
+    "getstarted": {
+      "uri": "https://bit.ly"
+    },
+    "support": {
+      "uri": "https://bit.ly"
+    },
+    "issues": {
+      "uri": "https://bit.ly"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://bit.ly"
+  },
+  "branding": {
+    "color": "rgb(220, 235, 252)",
+    "theme": "light"
+  },
+  "categories": [
+    "Plan and track"
+  ],
+  "contributions": [
+    {
+      "id": "vsts-ouf-sample-hub",
+      "targets": [
+        "ms.vss-work-web.work-hub-group"
+      ],
+      "type": "ms.vss-web.hub",
+      "description": "Display a simple Office UI Fabric hub",
+      "properties": {
+        "name": "Office UI Fabric Sample",
+        "uri": "index.html"
+      }
+    }
+  ]
+}

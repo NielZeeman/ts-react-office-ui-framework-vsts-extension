@@ -1,0 +1,11 @@
+{
+    "public": false,
+    "publisher": "yourpublisher",
+    "files": [
+        {
+            "path": "dist",
+            "addressable": true,
+            "packagePath": "/"
+        }
+    ]
+}
