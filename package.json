@@ -5,13 +5,16 @@
   "main": "index.tsx",
   "repository": "http://repo.org",
   "scripts": {
-    "test" : "jest",
+    "test": "jest",
     "build:tests": "tsc --outDir ./testdist --module commonjs",
     "copy:libs": "cpx node_modules/vss-web-extension-sdk/lib/VSS.SDK.min.js dist/scripts",
     "copy:static": "cpx \"static/**/*.*\" dist -v",
     "watch": "webpack --progress --watch",
     "start": "npm run copy:libs && npm run copy:static && npm build && webpack-dev-server --hot",
-    "build": "webpack"
+    "build": "webpack",
+    "pack:dev": "node ./config/package-Dev",
+    "pack:prod": "npm run build:release && node ./config/package-Release",
+    "build:release": "webpack --progress --colors --config webpack.config.prod.js --output-path ./dist -p"
   },
   "author": "",
   "license": "ISC",
@@ -26,6 +29,7 @@
     "@types/react": "^16.0.8",
     "@types/react-dom": "^16.0.0",
     "awesome-typescript-loader": "^3.2.3",
+    "copy-webpack-plugin": "^4.2.0",
     "cpx": "^1.5.0",
     "jest": "^21.2.1",
     "ts-jest": "^21.1.0",
@@ -36,7 +40,7 @@
     "webpack-dev-server": "^2.9.1"
   },
   "jest": {
-    "collectCoverage" : true,
+    "collectCoverage": true,
     "transform": {
       "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
@@ -48,6 +52,8 @@
       "jsx",
       "json"
     ],
-    "moduleNameMapper" : { "TFS" : "<rootDir>/node_modules/vss-web-extension-sdk/typings/index.d.ts" }
+    "moduleNameMapper": {
+      "TFS": "<rootDir>/node_modules/vss-web-extension-sdk/typings/index.d.ts"
+    }
   }
 }

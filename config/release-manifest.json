@@ -3,7 +3,7 @@
     "publisher": "yourpublisher",
     "files": [
         {
-            "path": "dist",
+            "path": "../dist",
             "addressable": true,
             "packagePath": "/"
         }
